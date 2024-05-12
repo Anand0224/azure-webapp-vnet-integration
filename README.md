@@ -1,6 +1,6 @@
 # win-web-app-vnet-int
 Azure windows web app creation with vnet integration using Terraform
-# Terraform Module: azurerm
+# Terraform Provider: azurerm
 
 The following resources are created upon successful execution.
   * Create Azure Resource Group
