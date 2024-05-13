@@ -10,12 +10,6 @@ variable "resource_group_name" {
   description = "Resource group name in your Azure subscription."
 }
 
-variable "azurerm_virtual_network_name" {
-  type        = string
-  default     = "az-rg-vnet"
-  description = "Virtual network name"
-}
-
 variable "integrationsubnet_name" {
   type    = string
   default = "integrationsubnet"
