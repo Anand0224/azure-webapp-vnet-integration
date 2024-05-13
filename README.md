@@ -10,13 +10,13 @@ The following Azure resources are created upon successful execution.
   * Frontend Web App with vnet integration
   * Staging Deployment slot with vnet integration
 
-## Prerequisites
+## Prerequisite
 
 Before using this module, you must have the following:
 - Azure subscription
 - Terraform must be installed locally and terraform directory must be set in the path variable.
 
-Azure web app is created according to the following variables. if needed change them to desired value.
+Azure web app is created according to the following variables. Change them to desired value if required
 
 | Variable Name | Description | Default Value |
 |------------|------------|--------------|
