@@ -1,5 +1,5 @@
 # win-web-app-vnet-int
-Using Terraform creating Azure windows web app and vnet integration
+This git repo is configured to create Azure windows web app and configure vnet integration using terraform.
 # Terraform Provider: azurerm
 
 The following Azure resources are created upon successful execution.
@@ -8,37 +8,49 @@ The following Azure resources are created upon successful execution.
   * Private endpoints
   * Appservice plan 
   * Frontend Web App with vnet integration
-  * Pre-production Deployment slot with vnet integration
+  * Staging Deployment slot with vnet integration
 
 ## Prerequisites
 
 Before using this module, you must have the following:
 - Azure subscription
-- Terraform installed locally
+- Terraform must be installed locally and terraform directory must be set in the path variable.
+
+Azure web app is created according to the following variables. if needed change them to desired value.
+
+| Variable Name | Description | Default Value |
+|------------|------------|--------------|
+| resource_group_location | enter preferred location | East US |
+| prefix | azure resource prefix | ak-demo  |
+| sku_name | sku name | P1v2  |
+
+
 
 ## Usage
 
-- Clone github repo: https://github.com/Anand0224/terraform
+- Clone github repo: https://github.com/Anand0224/win-web-app-vnet-int
 - Login to azure using commandline. Download azure CLI: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
-- Run the following terraform commands to create azure resources.
+- Run the following terraform commands to create azure resources. **Note**: Add terraform installed directory in the path variable
   	- terraform init
    - terraform plan -out plan-to-apply
    - terraform apply plan-to-apply
 
 ## Output
-Azure resources:
+Upon successful execution these Azure resources will be created.
 
-![image](https://github.com/Anand0224/terraform/assets/90755307/14272f76-c8d2-4f15-acc9-0cb606f2f6f6)
+![image](https://github.com/Anand0224/win-web-app-vnet-int/assets/90755307/5a666e1b-b031-477a-8daa-928dde207a11)
 
-
-- Web app with vnet integration
+- Azure Web app vnet integration
   
-![image](https://github.com/Anand0224/terraform/assets/90755307/853cbd35-bed9-48b5-901e-5124f0c38d1b)
+![image](https://github.com/Anand0224/win-web-app-vnet-int/assets/90755307/94163785-f9b8-49c3-b58a-52556ba33509)
 
-- Web app pre-production with vnet integration
+
+- Azure app service slot vnet integration
   
-![image](https://github.com/Anand0224/win-web-app-vnet-int/assets/90755307/7f57995f-9f87-4062-8984-630ce4acaf80)
+![image](https://github.com/Anand0224/win-web-app-vnet-int/assets/90755307/8806c510-9e67-4d57-b447-be73a60d2336)
+
 
 - Deployment slots
   
-![image](https://github.com/Anand0224/terraform/assets/90755307/c896f3f0-ac5b-4a7d-8426-72f86b67ae25)
+![image](https://github.com/Anand0224/win-web-app-vnet-int/assets/90755307/375f7a44-96d5-466b-ba43-bd36175ec02e)
+
