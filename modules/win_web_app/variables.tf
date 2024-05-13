@@ -1,6 +1,5 @@
 variable "prefix" {
   description = "The Prefix used for all resources in this demo"
-  default     = "ak"
   type        = string
 }
 
@@ -9,10 +8,6 @@ variable "resource_group_name" {
 }
 
 variable "resource_group_location" {
-  type = string
-}
-
-variable "privateendpoint" {
   type = string
 }
 
